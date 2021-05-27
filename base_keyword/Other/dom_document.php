@@ -1,0 +1,1 @@
+<?php/** * DOMDocument; berfungsi untuk mengambil tag tertenu dalam sebuah kode html */$html='<img border="0" src="/images/image.jpg" alt="Image" width="100" height="100 />';$doc=new DOMDocument();$doc->loadHTML($html);$xpath=new DOMXPath($doc);$src=$xpath->evaluate("string(//img/@src)");// will return /images/image.jpgecho$src;
