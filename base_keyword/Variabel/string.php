@@ -99,3 +99,15 @@ if (strpos($a, '#rcc#') !== false && strpos($a, '#year#') !== false) {
 }else{
     echo 'false';
 }
+
+//! str replace
+$subject = '1.000';
+echo str_replace(array(',', '.'), array('', ''), $subject);
+
+//! exploding specifi chart
+$data = "@Hendri Gunawan blabala";    
+$data = explode('@', $data);
+echo $data[1];
+$data = explode(' ', $data[1]);
+echo "\n";
+echo $data[1].''.$data[2];
