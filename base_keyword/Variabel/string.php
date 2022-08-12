@@ -105,9 +105,21 @@ $subject = '1.000';
 echo str_replace(array(',', '.'), array('', ''), $subject);
 
 //! exploding specifi chart
-$data = "@Hendri Gunawan blabala";    
-$data = explode('@', $data);
-echo $data[1];
-$data = explode(' ', $data[1]);
-echo "\n";
-echo $data[1].''.$data[2];
+$data = "@Hendri Gunawan blabala adalah sayaa untuj ";    
+if (strpos($data, '@') !== false) {
+    $data = explode('@', $data);
+    echo $data[1];
+    $data = explode(' ', $data[1]);
+    echo "\n";
+    echo $data[0].' '.$data[1];
+}else{
+    echo 'false';
+}
+
+
+$a = 'https://bitrix.mahachem.com/maha/finance/soa.php?login=yes&view_report=Y&SOADate=2022-07-20&RCC=MCA&CUST=CEW&W02';
+$prefix = "&CUST";
+$index = strpos($a, $prefix) + strlen($prefix);
+$result = substr($a, $index);
+echo $result;
+echo str_replace('&','and', "CEALP02F");

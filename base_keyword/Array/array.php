@@ -78,9 +78,11 @@ echo "\n";
 $a = [['Email' => 'ogisetiawan21@.com'], ['Email' => 'setiawn']];
 echo implode(",", array_column($a, "Email"));
 
-$data = "@Hendri Gunawan blabala";    
-$data = explode('@', $data);
-echo $data[1];
-$data = explode(' ', $data[1]);
-echo "\n";
-echo $data[1].''.$data[2];
+echo "=====Array RESERVE==== \r";
+$dateTime = new DateTime('first day of this month');
+for ($i = 1; $i <= 12; $i++) {
+    $last_six_months[] = $dateTime->format('F Y');
+    $dateTime->modify('-1 month');
+}
+$last_month_reserve = array_reverse($last_six_months);
+print_r($last_month_reserve);

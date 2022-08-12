@@ -52,3 +52,14 @@ echo "===== Operator Ternary ==== \r";
 $n = 70;
 print_r($n <> 71/*expr1*/ ? 'Lulus' /*expr2*/ : 'Gagal' /*expr3*/);
 print("\n");
+
+echo "===== Mencari nilai Besar dan Kecil dari Loop ==== \r";
+$a = 4;
+$b = array();
+for ($i=1; $i <=2 ; $i++) { 
+    $b[] = $a+$i;
+}
+print_r($b);
+echo min($b);
+echo " dan ";
+echo max($b);
